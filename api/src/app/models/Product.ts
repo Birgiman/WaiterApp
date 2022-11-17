@@ -6,15 +6,15 @@ export const Product = model('Product', new Schema({
 		required: true,
 	},
 	description: {
-		trype: String,
+		type: String,
 		required: true,
 	},
 	imagePath: {
-		trype: String,
+		type: String,
 		required: true,
 	},
 	price: {
-		trype: Number,
+		type: Number,
 		required: true,
 	},
 	ingredients: {
