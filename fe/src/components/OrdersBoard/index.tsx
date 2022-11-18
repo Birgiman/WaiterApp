@@ -1,11 +1,16 @@
 import { Board, OrdersContainer } from './styles';
 
-export function OrdersBoard() {
+interface OrdersBoardProps {
+	icon: string;
+	title: string;
+}
+
+export function OrdersBoard({ icon, title }: OrdersBoardProps) {
 	return(
 		<Board>
 			<header>
-				<span>🕐</span>
-				<strong>Fila de espera</strong>
+				<span>{icon}</span>
+				<strong>{title}</strong>
 				<span>(1)</span>
 			</header>
 			<OrdersContainer>
