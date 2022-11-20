@@ -12,19 +12,19 @@ const orders: Order[] = [
 				'product': {
 					'name': 'Coca Cola',
 					'imagePath': '1668715381078-coca-cola.png',
-					'price': 40,
+					'price': 7,
 				},
 				'quantity': 1,
 				'_id': '63790d58ce8d95c95aa34e41'
 			},
 			{
 				'product': {
-					'name': 'Coca cola',
-					'imagePath': '1668715381078-coca-cola.png',
-					'price': 40,
+					'name': 'Hamburger',
+					'imagePath': '1668715464125-burger-molho-especial.png',
+					'price': 20,
 				},
-				'quantity': 6,
-				'_id': '63790d58ce8d95c95aa34e41'
+				'quantity': 3,
+				'_id': '637a2be08484f2596928b2f1'
 			}
 		],
 	}
