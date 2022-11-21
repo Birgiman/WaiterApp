@@ -8,6 +8,7 @@ import { Container,
 import { Header } from '../Header';
 import { Categories } from '../components/Categories';
 import { Menu } from '../components/Menu';
+import { Button } from '../components/Button';
 
 export function Main() {
 	return (
@@ -28,7 +29,9 @@ export function Main() {
 
 			<Footer>
 				<FooterContainer>
-
+					<Button onPress={() => alert('deu certo')}>
+						Novo Pedido
+					</Button>
 				</FooterContainer>
 			</Footer>
 		</>
