@@ -11,7 +11,7 @@
     <summary align="center"><b>en-US</b></summary>
     </br>
     <img align="left" height="100em" alt="Jim Carrey"
-      src="https://user-images.githubusercontent.com/101602651/203402879-3e11c96c-a163-4666-a62f-86130d885c17.gif">
+      src="https://user-images.githubusercontent.com/101602651/203405592-5045955d-4107-4e6d-ba53-734873fdeb45.gif">
     <div align="left">
       <b>      Release date: 11/28/2022</b>
       </br>
@@ -30,10 +30,13 @@
     src="https://user-images.githubusercontent.com/101602651/175787800-ac6e93b9-8679-4f4a-8848-5ff748577818.png">
   <details>
     <summary align="center"><b>pt-BR</b></summary>
+    </br>
+    <img align="left" height="100em" alt="Jim Carrey"
+      src="https://user-images.githubusercontent.com/101602651/203405592-5045955d-4107-4e6d-ba53-734873fdeb45.gif">
     <div align="center">
-      <b>Data de lançamento: 28/11/2022</b>
+      <b>      Data de lançamento: 28/11/2022</b>
       <br/>
-      <i>Este é um Projeto Full Stack e continua em construção!</i>
+      <i>      Este é um Projeto Full Stack e continua em construção!</i>
     </div>
   </details> 
 </p>
