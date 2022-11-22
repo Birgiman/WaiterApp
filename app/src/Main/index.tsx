@@ -5,7 +5,7 @@ import { Container,
 	FooterContainer
 } from './styles';
 
-import { Header } from '../Header';
+import { Header } from '../components/Header';
 import { Categories } from '../components/Categories';
 import { Menu } from '../components/Menu';
 import { Button } from '../components/Button';
@@ -21,11 +21,18 @@ export function Main() {
 		setSelectedTable(table);
 	}
 
+	function handleCancelOrder() {
+		setSelectedTable('');
+	}
+
 	return (
 		<>
 			<Container>
 
-				<Header />
+				<Header
+					selectedTable={selectedTable}
+					onCancelOrder={handleCancelOrder}
+				/>
 
 				<CategoriesContainer>
 					<Categories />
