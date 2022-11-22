@@ -13,8 +13,10 @@
     <img align="left" height="100em" alt="Jim Carrey"
       src="https://user-images.githubusercontent.com/101602651/203405592-5045955d-4107-4e6d-ba53-734873fdeb45.gif">
     <div align="left">
+      <br/>
       <b>      Release date: 11/28/2022</b>
       </br>
+      <br/>
       <i>      This is a Full Stack Project and still under construction!</i>
     </div>
   </details>
@@ -33,8 +35,10 @@
     </br>
     <img align="left" height="100em" alt="Jim Carrey"
       src="https://user-images.githubusercontent.com/101602651/203405592-5045955d-4107-4e6d-ba53-734873fdeb45.gif">
-    <div align="center">
+    <div align="left">
+      <br/>
       <b>      Data de lançamento: 28/11/2022</b>
+      <br/>
       <br/>
       <i>      Este é um Projeto Full Stack e continua em construção!</i>
     </div>
