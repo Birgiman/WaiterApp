@@ -1,4 +1,4 @@
-import { FlatList, TouchableOpacity } from 'react-native';
+import { FlatList } from 'react-native';
 
 import { products } from '../../mocks/products';
 import { formatCurrency } from '../../utils/formatCurrency';
