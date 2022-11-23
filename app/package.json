@@ -13,12 +13,14 @@
     "expo-font": "~11.0.1",
     "expo-status-bar": "~1.4.2",
     "intl": "^1.2.5",
+    "node": "^19.1.0",
     "react": "18.1.0",
     "react-dom": "18.1.0",
     "react-native": "0.70.5",
     "react-native-svg": "13.4.0",
     "react-native-web": "~0.18.9",
-    "styled-components": "^5.3.6"
+    "styled-components": "^5.3.6",
+    "yarn": "^1.22.19"
   },
   "devDependencies": {
     "@babel/core": "^7.12.9",
