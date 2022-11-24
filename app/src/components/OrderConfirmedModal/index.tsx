@@ -13,7 +13,7 @@ interface OrderCinfirmedModalProps {
 export function OrderConfirmedModal({ visible, onOk }: OrderCinfirmedModalProps) {
 	return(
 		<Modal
-			visible={true}
+			visible={visible}
 			animationType={'fade'}
 		>
 			<StatusBar style='light'/>

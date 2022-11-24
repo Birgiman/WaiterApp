@@ -28,7 +28,10 @@ interface CartProps {
 
 export function Cart({ cartItems, onAdd, onDecrement, onConfirmOrder }: CartProps) {
 
+	const [isLoading, setIsLoading] = useState(false);
+
 	const [isModalVisible, setIsModalVisible] = useState(false);
+
 	const total = cartItems.reduce((acc, cartItem) => {
 		return acc + cartItem.quantity * cartItem.product.price;
 	}, 0);
@@ -59,7 +62,7 @@ export function Cart({ cartItems, onAdd, onDecrement, onConfirmOrder }: CartProp
 						<Item>
 							<ProductContainer>
 								<Image source={{
-									uri: `http://192.168.43.68:3001/uploads/${cartItem.product.imagePath}`,
+									uri: `http://26.48.110.69:3001/uploads/${cartItem.product.imagePath}`,
 								}}/>
 								<QuantityContainer>
 									<Text size={14} color='#666'>{cartItem.quantity}x</Text>
@@ -98,6 +101,7 @@ export function Cart({ cartItems, onAdd, onDecrement, onConfirmOrder }: CartProp
 				</TotalContainer>
 				<Button onPress={handleConfirmOrder}
 					disabled={cartItems.length === 0}
+					loading={isLoading}
 				>
 					Confirmar pedido
 				</Button>
