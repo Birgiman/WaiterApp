@@ -120,7 +120,7 @@ export const Actions = styled.footer`
 
 	button:disabled{
 		opacity: 0.5;
-		cursor: help;
+		cursor: not-allowed;
 	}
 
 	.primary {

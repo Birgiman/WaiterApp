@@ -34,11 +34,6 @@ export function OrderModal({ visible, order, onClose, onCancelOrder, isLoading, 
 		return null;
 	}
 
-	// let total = 0;
-	// order.products.forEach(({ product, quantity }) => {
-	// 	total += product.price * quantity;
-	// });
-
 	const total = order.products.reduce((total, { product, quantity }) => {
 		return total + (product.price * quantity);
 	}, 0);
@@ -93,30 +88,48 @@ export function OrderModal({ visible, order, onClose, onCancelOrder, isLoading, 
 					</div>
 				</OrderDetails>
 				<Actions>
-					{order.status != 'DONE' && (
+					{order.status != 'DONE' ? (
+						<>
+							<button
+								type="button"
+								className='primary'
+								disabled={isLoading}
+								onClick={onChangeOrderStatus}
+							>
+								<span>
+									{order.status === 'WAITING' && '👩🏻‍🍳'}
+									{order.status === 'IN_PRODUCTION' && '✅'}
+								</span>
+								<strong>
+									{order.status === 'WAITING' && 'Iniciar Produção'}
+									{order.status === 'IN_PRODUCTION' && 'Concluir Pedido'}
+								</strong>
+							</button>
+							<button
+								type="button"
+								className='secundary'
+								onClick={onCancelOrder}
+							>
+								Cancelar Pedido
+							</button>
+						</>
+					) : (
 						<button
 							type="button"
 							className='primary'
 							disabled={isLoading}
-							onClick={onChangeOrderStatus}
+							onClick={onCancelOrder}
 						>
 							<span>
-								{order.status === 'WAITING' && '👩🏻‍🍳'}
-								{order.status === 'IN_PRODUCTION' && '✅'}
+								{order.status === 'DONE' && '🧹'}
 							</span>
 							<strong>
-								{order.status === 'WAITING' && 'Iniciar Produção'}
-								{order.status === 'IN_PRODUCTION' && 'Concluir Pedido'}
+								{order.status === 'DONE' && 'Limpar Pedido'}
 							</strong>
 						</button>
-					)}
-					<button
-						type="button"
-						className='secundary'
-						onClick={onCancelOrder}
-					>
-						Cancelar Pedido
-					</button>
+					)
+					}
+
 				</Actions>
 			</ModalBody>
 		</OverLay>
