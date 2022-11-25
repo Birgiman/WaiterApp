@@ -51,9 +51,14 @@ export function OrdersBoard({ icon, title, orders, onCancelOrder, onChangeOrderS
 
 		await api.delete(`/orders/${selectedOrder?._id}`);
 
-		toast.success(`O pedido da mesa ${selectedOrder?.table} foi cancelado!`);
+		if (selectedOrder!.status === 'DONE' ?
+			toast.success(`O pedido da mesa ${selectedOrder?.table} foi limpo!`)
+			: (
+				toast.success(`O pedido da mesa ${selectedOrder?.table} foi cancelado!`)
+			)
+		)
 
-		onCancelOrder(selectedOrder!._id);
+			onCancelOrder(selectedOrder!._id);
 		setIsLoading(false);
 		setIsModalVisible(false);
 	}
