@@ -1,48 +1,159 @@
-# Imersao-mateus-silva
 
-<h3>                              ⚠Men working!⚠</h3>
+# _WAITER_ APP
 
-<br />
+<div id='introducao'>
 
+O **WAITERAPP** é uma aplicação voltada para restaurantes e locais de gastronomia 
+no geral. Esse projeto foi desenvolvido em aula na imersão do Mateus Silva
+no Youtube, e o mesmo liberou para que os alunos publicassem e fizessem as suas
+próprias alterações.
+
+Futuramente irei acrescentar novas funcionalidades que você pode conferir no [Roadmap](#roadmap).
+</div>
+
+## Tópicos
+
+* [Introdução](#introducao)
+* [Instalar e rodar o projeto localmente](#instalacao)
+* [Stack utilizada](#stack_utilizada)
+* [Demonstração](#demonstração)
+* [Roadmap](#roadmap)
+* [Aprendizados](#aprendizados)
+* [Status](#status)
+* [Contatos](#contatos)
+
+<div id='instalacao'>
+
+## Instalando e rodando o projeto localmente:
+
+Para rodar o WAITER**APP** em sua máquina é bem simples.
+
+Você precisa ter instalado:
+
+- Node.js LTS v16
+- MongoDB Compass v1.33.1 (apenas caso você queira criar e editar pedidos e categorias, não é necessário para testar)
+- Expo para celular ou o Emulador do Android ou IOS.
+
+Para a instalação dos pacotes você deve entrar em cada pasta individualmente
+e rodar o comando `yarn install`, pois neste projeto temos a _API_, _WEB_ e _MOBILE_
+
+Navegue para `./api` e rode no terminal o comando:
+```bash
+yarn install
+```
+Repita esse passo para `../app` e depois em `../fe`.
+
+Pronto, agora você está preparado para utilizar esta aplicação.
+Para iniciar a _API_ e a _WEB_ basta rodar `yarn dev` em suas respectivas pastas.
+E para iniciar a versão _MOBILE_ basta rodar `yarn start` em sua respectiva pasta.  
+
+**OBS:** Caso você queira rodar a _API_ fora do ambiente de desenvolvimento, você pode
+rodar o comando `yarn build` e logo em seguida passar a utilizar o comando `yarn start`.
+</div>
+<div id='stack_utilizada'>
+<h2>Stack utilizada</h2>
+
+* **Front-end:** React, React-Native, Styled-Components, Axios, Expo, Intl e Typescript.
+
+* **Back-end:** Node, Express, Multer, Socket.io, Mongoose e Typescript.
+</div>
+<div id='demonstração'>
+<h2>Demonstração</h2>
+
+Para fazer um pedido iremos utilizar o aplicativo.
+
+1. Na tela inicial escolha um item, e logo em seguda será solicitado o número da mesa.
+
+<p align="center">
+  <img height="550" width="250" src="https://user-images.githubusercontent.com/101602651/204911673-a749e68f-fe0d-415a-bf5b-d319ab177e30.PNG"/>  
+  <img height="550" width="250" src="https://user-images.githubusercontent.com/101602651/204911675-83ea0087-8cfe-46d3-a3a8-6e31b94d22b5.PNG"/>  
+</p>
+
+2. Logo em seguida você poderá adicionar, remover itens ou cancelar o pedido.
+
+<p align="center">
+  <img height="550" width="250" src="https://user-images.githubusercontent.com/101602651/204911663-26fc58c1-92a0-4355-aa41-e0f8024b5e8e.PNG"/>  
+</p>
+
+3. Após clicar em `Confirmar pedido` ele aparecerá na sua _Dashboard_ no navegador.
+   Onde você poderá iniciar a produçao, finalizar, limpar ou cancelar o pedido.
+
+<p align="center">
+  <img height="550" width="250" src="https://user-images.githubusercontent.com/101602651/204923135-1950441e-6b75-4056-87b0-8c8088f7dec3.PNG"/>  
+</p>
+<p align="center">
+  <img src="https://user-images.githubusercontent.com/101602651/204923935-afe27062-6d68-4cd2-a39d-a658e9aedfd0.gif"/>  
+</p>
+</div>
+
+<div id='aprendizados'>
+<h2>Aprendizados</h2>
+
+Neste projeto aprendemos a utilizar muito bem o React, principalmente o `useState` e
+`useEffect` como podemos ver neste trecho de código:
+
+```bash
+\waiterapp\app\src\Main\index.tsx
+
+    const [isTableModalVisible, setIsTableModalVisible] = useState(false);
+	const [selectedTable, setSelectedTable] = useState('');
+	const [cartItems, setCartItems] = useState<CartItem[]>([]);
+	const [isLoading, setIsLoading] = useState(true);
+	const [categories, setCategories] = useState<Category[]>([]);
+	const [products, setProducts] = useState<Product[]>([]);
+	const [isLoadindProducts, setIsLoadindProducts] = useState(false);
+```
+
+Além disso o uso de `Interfaces` se faz presente durante todas as etapas do projeto, como podemos ver aqui:
+```bash
+\waiterapp\app\src\components\Cart\index.tsx
+
+interface CartProps {
+	cartItems: CartItem[];
+	onAdd: (product: Product) => void;
+	onDecrement: (product: Product) => void;
+	onConfirmOrder: () => void;
+	selectedTable: string;
+}
+```
+Utilizamos tambem durante toda a estilização do projeto o _Styled-Components_, facilitando
+a leitura do código tanto na _WEB_ quanto no _MOBILE_.
+
+
+Vale lembrar também da criação das rotas utilizando o `node:path`, `express` e `multer`.
+</div>
+<div id='roadmap'>
+<h2>Roadmap</h2>
+
+- Lançamento da v1.0 ✅
+- Adicionar animação **Shimmer Effect** 🔲
+- Adicionar **Splash Screen** 🔲
+- Adicionar **versão responsiva ao Dashboard** 🔲
+- Adicionar **autenticação de usuários** 🔲
+- Adicionar **nova tela de criar e alterar pedidos dentro do MOBILE** 🔲
+</div>
+
+<div id='status'>
+<h2>Status</h2>
 <p>
-  <img align="right" height="155em" alt="flag_estados-unidos" 
-    src="https://user-images.githubusercontent.com/101602651/175787763-a4c7c47c-5b88-4dba-95c1-acd669f8490b.png">
-  <details> 
-    <summary align="center"><b>en-US</b></summary>
-    </br>
     <img align="left" height="100em" alt="Jim Carrey"
       src="https://user-images.githubusercontent.com/101602651/203405592-5045955d-4107-4e6d-ba53-734873fdeb45.gif">
     <div align="left">
-      <br/>
-      <b>      Release date: 11/28/2022</b>
-      </br>
-      <br/>
-      <i>      This is a Full Stack Project and still under construction!</i>
-    </div>
-  </details>
-<p/>
-   
-<hr/>
-<br/>
-<br/>
-<br/>
-
-<p>
-  <img align="right" height="155em" alt="flag_brasil" 
-    src="https://user-images.githubusercontent.com/101602651/175787800-ac6e93b9-8679-4f4a-8848-5ff748577818.png">
-  <details>
-    <summary align="center"><b>pt-BR</b></summary>
-    </br>
-    <img align="left" height="100em" alt="Jim Carrey"
-      src="https://user-images.githubusercontent.com/101602651/203405592-5045955d-4107-4e6d-ba53-734873fdeb45.gif">
-    <div align="left">
-      <br/>
-      <b>      Data de lançamento: 28/11/2022</b>
-      <br/>
       <br/>
       <i>      Este é um Projeto Full Stack e continua em construção!</i>
     </div>
-  </details> 
 </p>
+</div>
 
-<hr/>
+</br>
+</br>
+</br>
+
+<div id='contatos'>
+
+<h2>Entre em contato comigo!</h2>
+
+<a href="https://www.instagram.com/birgiman_eduardo/" target="_blank"><img src="https://img.shields.io/badge/-Instagram-%23E4405F?style=for-the-badge&logo=instagram&logoColor=white" target="_blank"></a>
+  <a href = "mailto:eduardo.birgiman@outlook.com"><img src="https://img.shields.io/badge/Microsoft_Outlook-0078D4?style=for-the-badge&logo=microsoft-outlook&logoColor=white" target="_blank"></a>
+  <a href="https://www.linkedin.com/in/eduardo-birgiman-domingues/" target="_blank"><img src="https://img.shields.io/badge/-LinkedIn-%230077B5?style=for-the-badge&logo=linkedin&logoColor=white" target="_blank"></a> 
+</div>
