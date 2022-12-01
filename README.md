@@ -43,6 +43,27 @@ yarn install
 ```
 Repita esse passo para `../app` e depois em `../fe`.
 
+### Rotas
+
+Lembre-se de alterar as rotas da aplicação nos arquivos:
+<div>
+	
+`\waiterapp\app\src\components\ProductModal\index.tsx`
+
+	
+`\waiterapp\app\src\components\Menu\index.tsx`
+
+	
+`\waiterapp\app\src\components\Cart\index.tsx`
+
+</div>
+
+> Para facilitar você pode buscar na raíz do projeto por `uri:` que o VSCode encontra para você.
+
+E mais um detalhe, a porta padrão da aplicação foi definida para `:3001`. Caso você queira alterar basta entrar em:
+`\waiterapp\api\src\index.ts` 
+ou pesquisar na raíz do projeto por `const port` e alterar o valor da váriavel.
+
 Pronto, agora você está preparado para utilizar esta aplicação.
 Para iniciar a _API_ e a _WEB_ basta rodar `yarn dev` em suas respectivas pastas.
 E para iniciar a versão _MOBILE_ basta rodar `yarn start` em sua respectiva pasta.  
