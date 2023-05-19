@@ -1,5 +1,9 @@
 
 # _WAITER_ APP
+<div>
+	<img src="https://user-images.githubusercontent.com/101602651/204911676-ca120db1-f616-4158-9aa4-9ad4ea7d8ccd.PNG" id="cover-image" alt="Logo" />
+</div>
+</br>
 
 <div id='introducao'>
 
